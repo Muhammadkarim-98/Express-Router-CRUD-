@@ -1,0 +1,8 @@
+extends base1.pug
+block content 
+    form( action=`/instructor/${instructor.id}?_method=PATCH` method='POST')
+      input(type="text" name="inputText" value=`${instructor.inputText}`)
+      button Submit 
+    br
+    form( method='POST' action=`/instructor/${instructor.id}?_method=DELETE`)
+      input(type="submit" value="Delete")

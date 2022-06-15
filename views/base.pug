@@ -1,0 +1,11 @@
+extends base1.pug
+block content
+  h1 List of all Instructors! 
+  br
+  a(href='/instructor/newOne') Create new one!
+  br
+  ul 
+    each instructor in instructors
+      li #{instructor.inputText}
+        a(href=`/instructor/${instructor.id}/edit`)  Edit
+      br
